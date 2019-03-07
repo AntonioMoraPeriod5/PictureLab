@@ -110,10 +110,25 @@ public class IntArrayWorker
         }
      return count;
     }
-  public int getLargest(int n)
+  public int getLargest()
   {
-      int largest = 0;
-      for (int [] col : matrix)
-        for ( int 
+      int largest = matrix [0][0];
+      for (int [] row : matrix)
+      {
+      for( int pixel : row )
+         {
+             if (pixel < largest)
+             largest=pixel;
+         }
+      }
+      return largest;
+  }
+  public int getColTotal()
+  {
+      int ColTotal = 0;
+      
+      
+      
+      
   }
 }
