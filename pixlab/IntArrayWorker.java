@@ -123,12 +123,12 @@ public class IntArrayWorker
       }
       return largest;
   }
-  public int getColTotal()
+  public int getColTotal(int n)
   {
-      int ColTotal = 0;
+      int total = 0;
+      for ( int i=0; i<matrix.length; i++)
+        total += matrix [i][n];
       
-      
-      
-      
+      return total;
   }
 }

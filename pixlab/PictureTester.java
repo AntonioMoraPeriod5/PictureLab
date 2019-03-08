@@ -8,7 +8,20 @@
  */
 public class PictureTester
 {
+  
   /** Method to test zeroBlue */
+  public static void testKeepOnlyBlue()
+  {
+      Picture Goofy = new Picture("Goofy.jpg");
+      Goofy.explore();
+      Goofy.KeepOnlyBlue();
+  }
+  public static void testNegate()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.Negate();
+  }    
   public static void testZeroBlue()
   {
     Picture beach = new Picture("beach.jpg");
@@ -59,7 +72,7 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
     testZeroBlue();
-    //testKeepOnlyBlue();
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
