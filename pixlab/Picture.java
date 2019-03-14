@@ -318,7 +318,7 @@ public class Picture extends SimplePicture
         toPixel.setColor(fromPixel.getColor());
       }
     }   
-  }
+  }//end Mirror
   
   /** Method to create a collage of several pictures */
   public void createCollage()
@@ -335,8 +335,32 @@ public class Picture extends SimplePicture
     this.copy(flower2,500,120);
     this.mirrorVertical();
     this.write("collage.jpg");
-  }
-  
+  }//end createCollage
+  public void copy(Picture fromPic, 
+                 int startRow, int startCol,
+                 int fSR,      int fSC,
+                 int fER,      int fEC)
+  {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    for (int fromRow = fSR, toRow = startRow; 
+         fromRow < fER &&
+         toRow < toPixels.length; 
+         fromRow++, toRow++)
+    {
+      for (int fromCol = fSC, toCol = startCol; 
+           fromCol < fEC &&
+           toCol < toPixels[0].length;  
+           fromCol++, toCol++)
+      {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
+    }   
+  }//end 2nd copy
   
   /** Method to show large changes in color 
     * @param edgeDist the distance for finding edges

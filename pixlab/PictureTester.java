@@ -96,7 +96,13 @@ public static void testMirrorDiagonal()
     canvas.createCollage();
     canvas.explore();
   }
-  
+    public static void testCopy()
+  {
+    Picture ocean = new Picture("beach.jpg");
+    Picture daddy = new Picture("snowman.jpg");
+    ocean.copy(daddy, 10 , 10 , 60,  160, 180, 230);
+    ocean.explore();
+  }
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
@@ -128,7 +134,7 @@ public static void testMirrorDiagonal()
     testMirrorArms();
     testMirrorGull();
     testCollage();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
