@@ -386,7 +386,7 @@ public class Picture extends SimplePicture
           leftPixel.setColor(Color.WHITE);
       }
     }
-  }
+  }//End EdgeDetection
   
   
   /* Main method for testing - each class in Java can have a main 
